@@ -1,0 +1,28 @@
+server:
+  port: 8999
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eurekaServer:8761/eureka/
+  instance:
+    #preferIpAddress : true
+    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
+    hostname: springcloud-hystrix-dashboard
+#  instance:
+#     prefer-ip-address: true
+#     instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+#     appname: sc-dashboard
+turbine:
+  aggregator:
+    clusterConfig: default
+  appConfig: eureka-client-admin-web
+  clusterNameExpression: new String("default")
+  instanceUrlSuffix: actuator/hystrix.stream
+spring:
+  application:
+    name: springcloud-hystrix-dashboard
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

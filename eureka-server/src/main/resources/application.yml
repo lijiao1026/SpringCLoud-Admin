@@ -1,0 +1,26 @@
+server:
+  port: 8761
+eureka:
+  instance:
+    hostname: eurekaServer
+    instance-id: ${spring.cloud.client.ip_address}:${server.port}
+    #prefer-ip-address: true
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+  server:
+    #设为false，关闭自我保护主要）
+    enable-self-preservation: false
+    #该配置可以修改检查失效服务的时间，每隔10s检查失效服务，并移除列表 (Spring Cloud默认该配置是 60s)
+    eviction-interval-timer-in-ms: 4000
+spring:
+  mail:
+    host: smtp.ym.163.com
+    username: lij@wizpower.com
+    password: lijiao1026
+    port: 25
+    protocol: smtp
+    default-encoding: UTF-8
+    toMail: 15365186121@163.com

@@ -1,0 +1,24 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eurekaServer:8761/eureka/
+  instance:
+      #preferIpAddress : true
+      instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
+      hostname: cloud-zuul
+server:
+  port: 9080
+spring:
+  application:
+    name: cloud-zuul
+  zipkin:
+      enabled: true
+      base-url: http://springcloud-zipkin:9411
+  sleuth:
+    sampler:
+      probability: 1
+zuul:
+  routes:
+    resource-admin:
+     path: /admin/**
+     serviceId: eureka-client-admin-service

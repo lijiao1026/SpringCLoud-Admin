@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="eureka-client" />
+        <module name="eureka-client-admin-web" />
+        <module name="eureka-server" />
+        <module name="spring-cloud-zuul" />
+        <module name="springboot-admin" />
+        <module name="springcloud-config" />
+        <module name="springcloud-hystrix-dashboard" />
+        <module name="springcloud-zipkin" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ereka-server" target="1.8" />
+      <module name="eureka-client" target="1.8" />
+      <module name="eureka-client-admin-web" target="1.8" />
+      <module name="eureka-server" target="1.8" />
+      <module name="spring-cloud-zuul" target="1.8" />
+      <module name="springboot-admin" target="1.8" />
+      <module name="springcloud-config" target="1.8" />
+      <module name="springcloud-hystrix-dashboard" target="1.8" />
+      <module name="springcloud-zipkin" target="1.8" />
+      <module name="springcloudparent" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

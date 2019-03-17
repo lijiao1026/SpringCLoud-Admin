@@ -1,0 +1,43 @@
+spring:
+  application:
+    name: springcloud-config
+  #表示从本地读取
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/config
+server:
+  port: 8888
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eurekaServer:8761/eureka/
+    #//开启健康检查（需要spring-boot-starter-actuator依赖）
+    healthcheck:
+      enabled: true
+    registry-fetch-interval-seconds: 30
+  instance:
+    #租期更新时间间隔（默认30秒）
+    lease-renewal-interval-in-seconds: 10
+    #租期到期时间（默认90秒）
+    lease-expiration-duration-in-seconds: 30
+    health-check-url-path: /actuator/health
+    #preferIpAddress : true
+    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
+    hostname: springcloud-config
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        exclude: "env"
+#  endpoints:
+#    web:
+#      exposure:
+#        include: info,health,env,beans

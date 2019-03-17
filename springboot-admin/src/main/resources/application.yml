@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: springboot-admin
+  profiles:
+    active: secure
+  security:
+    user:
+      name: "user"
+      password:  "password"
+  mail:
+    host: smtp.ym.163.com
+    username: lij@wizpower.com
+    password: lijiao1026
+    port: 25
+    protocol: smtp
+    default-encoding: UTF-8
+  boot:
+    admin:
+      notify:
+        mail:
+          to: 15365186121@163.com
+          from: lij@wizpower.com
+server:
+  port: 8788
+eureka:
+  instance:
+    health-check-url-path: /actuator/health
+    metadata-map:
+      user.name: "user"
+      user.password: "password"
+    #preferIpAddress : true
+    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
+    hostname: springboot-admin
+  client:
+    service-url:
+      defaultZone: http://eurekaServer:8761/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always

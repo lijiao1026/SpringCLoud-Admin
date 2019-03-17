@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/eureka-client/eureka-client.iml" filepath="$PROJECT_DIR$/eureka-client/eureka-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureka-client-admin-web/eureka-client-admin-web.iml" filepath="$PROJECT_DIR$/eureka-client-admin-web/eureka-client-admin-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureka-server/eureka-server.iml" filepath="$PROJECT_DIR$/eureka-server/eureka-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud-zuul/spring-cloud-zuul.iml" filepath="$PROJECT_DIR$/spring-cloud-zuul/spring-cloud-zuul.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-admin/springboot-admin.iml" filepath="$PROJECT_DIR$/springboot-admin/springboot-admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud-config/springcloud-config.iml" filepath="$PROJECT_DIR$/springcloud-config/springcloud-config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud-hystrix-dashboard/springcloud-hystrix-dashboard.iml" filepath="$PROJECT_DIR$/springcloud-hystrix-dashboard/springcloud-hystrix-dashboard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud-zipkin/springcloud-zipkin.iml" filepath="$PROJECT_DIR$/springcloud-zipkin/springcloud-zipkin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloudparent.iml" filepath="$PROJECT_DIR$/springcloudparent.iml" />
+    </modules>
+  </component>
+</project>

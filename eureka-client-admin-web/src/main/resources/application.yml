@@ -1,0 +1,50 @@
+server:
+  port: 9010
+  #servlet:
+   # context-path: /
+eureka:
+  instance:
+    health-check-url-path: /actuator/health
+    #preferIpAddress : true
+    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
+    hostname: eureka-client-admin-web
+  client:
+    service-url:
+      defaultZone: http://eurekaServer:8761/eureka/
+spring:
+  application:
+    name: eureka-client-admin-web
+  zipkin:
+      enabled: true
+      base-url: http://springcloud-zipkin:9411
+  sleuth:
+    sampler:
+     probability: 1
+  main:
+    allow-bean-definition-overriding: true
+  thymeleaf:
+    cache: false
+    mode: LEGACYHTML5
+logging:
+  file: /rbac.log
+  level:
+    com.wizpower.eurekaclientadminweb.web.controller: debug
+feign:
+  httpclient:
+    connection-timeout: 10000
+    enabled: true
+  hystrix:
+    enabled: true
+#springboot2.0. 的配置项为：
+#actuator端口
+management:
+ # server:
+ #  port: 9001
+  endpoints:
+    web:
+   #   base-path: / #修改访问路径  2.0之前默认是/   2.0默认是 /actuator  可以通过这个属性值修改
+      exposure:
+        include: '*'  #开放所有页面节点  默认只开启了health、info两个节点
+  endpoint:
+      health:
+        show-details: always

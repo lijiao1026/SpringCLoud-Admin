@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: eureka-client-admin-service
+  cloud:
+    config:
+      #label: master
+      profile: dev
+      uri: http://springcloud-config:8888
+      #enabled: true
+      #discovery:
+      #  enabled: true
+      #  service-id: springcloud-config
+  zipkin:
+    enabled: true
+    base-url: http://springcloud-zipkin:9411
+  sleuth:
+    sampler:
+      probability: 1
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eurekaServer:8761/eureka/
+  instance:
+      #租期更新时间间隔（默认30秒）
+      lease-renewal-interval-in-seconds: 10
+      #租期到期时间（默认90秒）
+      lease-expiration-duration-in-seconds: 30
+      health-check-url-path: /actuator/health
+      #preferIpAddress : true
+      instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
+      hostname: eureka-client-admin-service
