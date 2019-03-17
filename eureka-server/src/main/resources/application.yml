@@ -11,16 +11,16 @@ eureka:
     service-url:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
   server:
-    #ÉèÎªfalse£¬¹Ø±Õ×ÔÎÒ±£»¤Ö÷Òª£©
+    #è®¾ä¸ºfalseï¼Œå…³é—­è‡ªæˆ‘ä¿æŠ¤ä¸»è¦ï¼‰
     enable-self-preservation: false
-    #¸ÃÅäÖÃ¿ÉÒÔĞŞ¸Ä¼ì²éÊ§Ğ§·şÎñµÄÊ±¼ä£¬Ã¿¸ô10s¼ì²éÊ§Ğ§·şÎñ£¬²¢ÒÆ³ıÁĞ±í (Spring CloudÄ¬ÈÏ¸ÃÅäÖÃÊÇ 60s)
+    #è¯¥é…ç½®å¯ä»¥ä¿®æ”¹æ£€æŸ¥å¤±æ•ˆæœåŠ¡çš„æ—¶é—´ï¼Œæ¯éš”10sæ£€æŸ¥å¤±æ•ˆæœåŠ¡ï¼Œå¹¶ç§»é™¤åˆ—è¡¨ (Spring Cloudé»˜è®¤è¯¥é…ç½®æ˜¯ 60s)
     eviction-interval-timer-in-ms: 4000
 spring:
   mail:
     host: smtp.ym.163.com
-    username: lij@wizpower.com
-    password: lijiao1026
+    username: //é‚®ç®±è´¦å·
+    password: //é‚®ç®±å¯†ç 
     port: 25
     protocol: smtp
     default-encoding: UTF-8
-    toMail: 15365186121@163.com
+    toMail: //æ¥æ”¶æ–¹é‚®ç®±è´¦å·
