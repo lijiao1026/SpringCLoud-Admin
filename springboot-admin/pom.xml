@@ -75,7 +75,7 @@
 					<imageName>springcloud-admin:1.0.0</imageName>
 					<baseImage>java</baseImage>
 					<entryPoint>["java", "-jar", "/${project.build.finalName}.jar"]</entryPoint>
-					<dockerHost>http://180.76.115.105:2375</dockerHost>
+					<dockerHost>http://docker主机的IP地址:2375</dockerHost>
 					<resources>
 						<resource>
 							<targetPath>/</targetPath>
