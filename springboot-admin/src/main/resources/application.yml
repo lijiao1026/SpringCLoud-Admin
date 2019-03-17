@@ -9,8 +9,8 @@ spring:
       password:  "password"
   mail:
     host: smtp.ym.163.com
-    username: lij@wizpower.com
-    password: lijiao1026
+    username: //发送方邮箱
+    password: //发送方邮箱密码
     port: 25
     protocol: smtp
     default-encoding: UTF-8
@@ -18,8 +18,8 @@ spring:
     admin:
       notify:
         mail:
-          to: 15365186121@163.com
-          from: lij@wizpower.com
+          to: //接收方邮箱账号
+          from: //发送方邮箱
 server:
   port: 8788
 eureka:
